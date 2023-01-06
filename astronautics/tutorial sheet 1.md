@@ -1,0 +1,21 @@
+1) The ACS controls the pointing of a spacecraft. this is commonly so that the payload can point in the direction it needs, and comms can point where they need. It absorbs external torques so they dont affect the operation of the sapcecraft
+2)
+3) The diagonal terms are the moments of inertia, and they describe how much effort you need to put in to get a given angular speed. For spinner or dual spin spacecraft, one of the terms should be high to give a large amount of momentum bias, and the other two terms should be as close to 0 as possible, and definitely equal for long terms stability. The off-diagonal terms are the products of inertia, and they describe how oscillation in one axis will affect the oscillations in other axes. These should be 0 for long term stability.
+4) 
+- spinner spacecraft have the whole body of the spacecraft spinning at $10-60rpm$. This provides a large momenum bias in the direction of the spin.
+- dual spinner spacecraft operate in a similar way, but with a despun section. This allows more powerful high gain antennas to be used, as well as large solar arrays. The coupling in the middle can be hard to design around.
+- hybrid spacecraft have a stationary outer body, but a momentum wheel spinning at thousands of rpm internally to provide momentum bias.
+- zero bias spacecraft have no significant rotating components, but use torquers to remain pointing in the right direction
+5) external torques change the total angular momentum of the spacecraft. Internal torquers dont. external torquers appear in the equation
+6) reaction wheels have a small mass in comparison to the spacecraft, but can spin a lot faster. when they increase their speed, and therefore angular momentum, the spacecraft has to react to perserve angular momentum. this means that the spacecraft starts spinning the other way. The wheel can be spun up to give the spacecraft a certain angular velocity, and then despun to stop that angular velocity. Momentum dumping is when a wheel is spinning at its maximum velocity, so to achieve control, it has to be despun. This is done by spinning down the wheel and using external torquers to cancel out the resulting motion. It starts because of external torques from the environment, like magnetic fields.
+7) Especially with type 1 spacecraft, large solar arrays and large radiator arrays are very difficult to put on the spacecraft. this leads to significant power limitations, which can obviously affect all other parts of the spacecraft. in addition, only certain payloads can be used, and only when they are pointing in certain directions. communicatiions can also be limited by needing to use an omnidirectional antenna. By using type 3 and 4 spacecraft, the use of large solar panels is possible. In addition to this, a high gain antenna can stay pointed at the same place. Particularly with type 4 spacecraft, more payloads can be used. The hubble space telescope is a good example of this.
+8) reaction wheels are used to control 0 bias spacecraft by having one for each axis. From this, they can each be controlled independently to achieve a desired direction or just for stabilisation
+9) passive stabilisation is using the properties of the spacecraft to maintain a direction. This can be achieved with things like a long, thin spacecraft to take advantage of gravity gradients, a magnet to use the magnetic field or spinning up the spacecraft. Active stabilisation uses torquers to keep the spacecraft pointed.
+10) it must be long and thin, like a pencil
+11) $\begin{pmatrix}0 & 0 & 0 \\ 0 & \infty & 0 \\ 0 & 0 & 0 \end{pmatrix}$
+12. 
+    1. the rotation phase will mean that the firing sequences will need to be pre-programmed into the spacecraft,  or a second antenna will be needed to transmit information. The spacecraft will need to be balanced along the other axes. A lot of energy will be needed to spin ad despin the spacecraft.
+    2. type 4, becuase it needs to be able to point along all axes, so momentum bias wont help.
+    3. control moment gyros, they are heay but cool
+    4. gas thrusters, they would only be used for momentum dumping to minimise fuel burn and the risk of contamination.
+    5. a star tracker for high accuracy when the star is visible, and an IMU to be used when the star isnt visible.
